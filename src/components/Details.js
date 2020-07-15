@@ -9,7 +9,10 @@ export default function Details(props) {
   // TASK 4 - Create a side effect 🥇 that runs only after first render.
   useEffect(() => {
     console.log(`🥇 Details mounted to the DOM (1st)`)
+
+    return () => console.log(`🥇 Details is about to be removed from the DOM`)
   }, [])
+
   // TASK 5 - Create a side effect 👻 that runs only after first render
   // and puts a 'click' event handler on document.
   // See what happens if we don't clean up.
